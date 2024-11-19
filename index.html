@@ -3,52 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Aryan Kumar</title>
+    <title>Aryan Kumar - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Basic Styling */
+        /* Basic Reset */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
+        }
+
+        /* Global Colors */
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #333;
+            --background-color: #f4f4f4;
+            --text-color: #555;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
         header {
-            background-color: #007BFF;
+            background: var(--primary-color);
             color: white;
-            text-align: center;
             padding: 1.5rem 0;
+            text-align: center;
         }
 
         header h1 {
-            margin: 0;
             font-size: 2.5rem;
+            margin: 0;
         }
 
         header p {
             font-size: 1.2rem;
         }
 
-        main {
-            max-width: 600px;
-            margin: 2rem auto;
-            background: white;
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--light-color);
+        }
+
+        section {
             padding: 2rem;
+            margin: 1.5rem auto;
+            max-width: 900px;
+            background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #007BFF;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
             text-align: center;
-            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
         }
 
-        form input,
-        form textarea,
-        form button {
+        p, ul {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+            list-style: none;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
             width: 100%;
             margin-bottom: 1rem;
             padding: 0.8rem;
@@ -57,64 +114,109 @@
             font-size: 1rem;
         }
 
-        form button {
-            background-color: #007BFF;
+        .contact-form button {
+            background: var(--primary-color);
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 1rem;
         }
 
-        form button:hover {
-            background-color: #0056b3;
+        .contact-form button:hover {
+            background: #0056b3;
         }
 
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #333;
+            background: var(--secondary-color);
             color: white;
             margin-top: 2rem;
         }
 
-        a {
-            color: #007BFF;
-            text-decoration: none;
+        /* Section Highlights */
+        #skills {
+            background: var(--light-color);
         }
 
-        a:hover {
-            text-decoration: underline;
+        #projects {
+            background: #e9f7ff;
+        }
+
+        #contact {
+            background: var(--light-color);
+        }
+
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            color: var(--primary-color);
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Aryan Kumar</h1>
-        <p>Contact me via the form below</p>
+        <p>Aspiring Developer | Skilled in Java, Python, and C</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <main>
-        <h2>Send a Message</h2>
-        <form action="https://formsubmit.co/aryank.210704@gmail.com" method="POST">
-            <!-- Name Field -->
-            <input type="text" name="name" placeholder="Your Name" required>
 
-            <!-- Email Field -->
-            <input type="email" name="email" placeholder="Your Email" required>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi! I’m Aryan, a tech enthusiast with a passion for problem-solving and software development.
+            I specialize in programming languages like Java, Python, and C, and I am eager to contribute to impactful projects.
+        </p>
+    </section>
 
-            <!-- Message Field -->
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Java:</strong> Advanced</li>
+            <li><strong>Python:</strong> Intermediate</li>
+            <li><strong>C Language:</strong> Intermediate</li>
+        </ul>
+    </section>
 
-            <!-- Submit Button -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Library Management System (Java):</strong> A console-based system to manage books and users in a library.
+            </li>
+            <li>
+                <strong>Data Analyzer (Python):</strong> A script to process and visualize large datasets.
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you’d like to get in touch, feel free to reach out:</p>
+        <ul>
+            <li><i class="fas fa-envelope icon"></i> <a href="mailto:aryank.210704@gmail.com">aryank.210704@gmail.com</a></li>
+            <li><i class="fab fa-linkedin icon"></i> <a href="https://www.linkedin.com/in/aryan-kumar-088a11299" target="_blank">Aryan Kumar</a></li>
+        </ul>
+        <form action="https://formspree.io/f/xpwzlrzr" method="POST" class="contact-form">
+            <label>
+                Your email:
+                <input type="email" name="email" placeholder="Your Email" required>
+            </label>
+            <label>
+                Your message:
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            </label>
             <button type="submit">Send Message</button>
-
-            <!-- Anti-Bot Hidden Input -->
-            <input type="hidden" name="_captcha" value="false">
-
-            <!-- Redirect to Thank You Page -->
-            <input type="hidden" name="_next" value="https://yourwebsite.github.io/thank-you.html">
         </form>
-    </main>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Aryan Kumar | <a href="https://www.linkedin.com/in/aryan-kumar-088a11299" target="_blank">LinkedIn</a></p>
+        <p>&copy; 2024 Aryan Kumar. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
